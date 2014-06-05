@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBE79C0419409706007E2CF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE79C0319409706007E2CF5 /* AppDelegate.swift */; };
+		CBE79C0619409706007E2CF5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CBE79C0519409706007E2CF5 /* GameScene.sks */; };
+		CBE79C0819409706007E2CF5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE79C0719409706007E2CF5 /* GameScene.swift */; };
+		CBE79C0A19409706007E2CF5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE79C0919409706007E2CF5 /* GameViewController.swift */; };
+		CBE79C0D19409706007E2CF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE79C0B19409706007E2CF5 /* Main.storyboard */; };
+		CBE79C0F19409706007E2CF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE79C0E19409706007E2CF5 /* Images.xcassets */; };
+		CBE79C1B19409706007E2CF5 /* Jam2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE79C1A19409706007E2CF5 /* Jam2Tests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBE79C1519409706007E2CF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBE79BF619409706007E2CF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBE79BFD19409706007E2CF5;
+			remoteInfo = Jam2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBE79BFE19409706007E2CF5 /* Jam2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jam2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE79C0219409706007E2CF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBE79C0319409706007E2CF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBE79C0519409706007E2CF5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		CBE79C0719409706007E2CF5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		CBE79C0919409706007E2CF5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CBE79C0C19409706007E2CF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBE79C0E19409706007E2CF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CBE79C1419409706007E2CF5 /* Jam2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Jam2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBE79C1919409706007E2CF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBE79C1A19409706007E2CF5 /* Jam2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jam2Tests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBE79BFB19409706007E2CF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE79C1119409706007E2CF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBE79BF519409706007E2CF5 = {
+			isa = PBXGroup;
+			children = (
+				CBE79C0019409706007E2CF5 /* Jam2 */,
+				CBE79C1719409706007E2CF5 /* Jam2Tests */,
+				CBE79BFF19409706007E2CF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBE79BFF19409706007E2CF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBE79BFE19409706007E2CF5 /* Jam2.app */,
+				CBE79C1419409706007E2CF5 /* Jam2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBE79C0019409706007E2CF5 /* Jam2 */ = {
+			isa = PBXGroup;
+			children = (
+				CBE79C0319409706007E2CF5 /* AppDelegate.swift */,
+				CBE79C0519409706007E2CF5 /* GameScene.sks */,
+				CBE79C0719409706007E2CF5 /* GameScene.swift */,
+				CBE79C0919409706007E2CF5 /* GameViewController.swift */,
+				CBE79C0B19409706007E2CF5 /* Main.storyboard */,
+				CBE79C0E19409706007E2CF5 /* Images.xcassets */,
+				CBE79C0119409706007E2CF5 /* Supporting Files */,
+			);
+			path = Jam2;
+			sourceTree = "<group>";
+		};
+		CBE79C0119409706007E2CF5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBE79C0219409706007E2CF5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBE79C1719409706007E2CF5 /* Jam2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CBE79C1A19409706007E2CF5 /* Jam2Tests.swift */,
+				CBE79C1819409706007E2CF5 /* Supporting Files */,
+			);
+			path = Jam2Tests;
+			sourceTree = "<group>";
+		};
+		CBE79C1819409706007E2CF5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBE79C1919409706007E2CF5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBE79BFD19409706007E2CF5 /* Jam2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBE79C1E19409706007E2CF5 /* Build configuration list for PBXNativeTarget "Jam2" */;
+			buildPhases = (
+				CBE79BFA19409706007E2CF5 /* Sources */,
+				CBE79BFB19409706007E2CF5 /* Frameworks */,
+				CBE79BFC19409706007E2CF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jam2;
+			productName = Jam2;
+			productReference = CBE79BFE19409706007E2CF5 /* Jam2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBE79C1319409706007E2CF5 /* Jam2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBE79C2119409706007E2CF5 /* Build configuration list for PBXNativeTarget "Jam2Tests" */;
+			buildPhases = (
+				CBE79C1019409706007E2CF5 /* Sources */,
+				CBE79C1119409706007E2CF5 /* Frameworks */,
+				CBE79C1219409706007E2CF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBE79C1619409706007E2CF5 /* PBXTargetDependency */,
+			);
+			name = Jam2Tests;
+			productName = Jam2Tests;
+			productReference = CBE79C1419409706007E2CF5 /* Jam2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBE79BF619409706007E2CF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = zhou;
+				TargetAttributes = {
+					CBE79BFD19409706007E2CF5 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					CBE79C1319409706007E2CF5 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = CBE79BFD19409706007E2CF5;
+					};
+				};
+			};
+			buildConfigurationList = CBE79BF919409706007E2CF5 /* Build configuration list for PBXProject "Jam2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBE79BF519409706007E2CF5;
+			productRefGroup = CBE79BFF19409706007E2CF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBE79BFD19409706007E2CF5 /* Jam2 */,
+				CBE79C1319409706007E2CF5 /* Jam2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBE79BFC19409706007E2CF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE79C0F19409706007E2CF5 /* Images.xcassets in Resources */,
+				CBE79C0619409706007E2CF5 /* GameScene.sks in Resources */,
+				CBE79C0D19409706007E2CF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE79C1219409706007E2CF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBE79BFA19409706007E2CF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE79C0819409706007E2CF5 /* GameScene.swift in Sources */,
+				CBE79C0A19409706007E2CF5 /* GameViewController.swift in Sources */,
+				CBE79C0419409706007E2CF5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE79C1019409706007E2CF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE79C1B19409706007E2CF5 /* Jam2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBE79C1619409706007E2CF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBE79BFD19409706007E2CF5 /* Jam2 */;
+			targetProxy = CBE79C1519409706007E2CF5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBE79C0B19409706007E2CF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBE79C0C19409706007E2CF5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBE79C1C19409706007E2CF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		CBE79C1D19409706007E2CF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBE79C1F19409706007E2CF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Jam2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CBE79C2019409706007E2CF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Jam2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CBE79C2219409706007E2CF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Jam2.app/Jam2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Jam2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		CBE79C2319409706007E2CF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Jam2.app/Jam2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Jam2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBE79BF919409706007E2CF5 /* Build configuration list for PBXProject "Jam2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE79C1C19409706007E2CF5 /* Debug */,
+				CBE79C1D19409706007E2CF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBE79C1E19409706007E2CF5 /* Build configuration list for PBXNativeTarget "Jam2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE79C1F19409706007E2CF5 /* Debug */,
+				CBE79C2019409706007E2CF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CBE79C2119409706007E2CF5 /* Build configuration list for PBXNativeTarget "Jam2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE79C2219409706007E2CF5 /* Debug */,
+				CBE79C2319409706007E2CF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBE79BF619409706007E2CF5 /* Project object */;
+}
