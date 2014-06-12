@@ -10,8 +10,34 @@ import Foundation
 import SpriteKit
 
 class Scene1 : SKScene {
+  let _scene1Atlas = SKTextureAtlas(named: "Scene1")
+
   var _clickableAnimationNode = SKSpriteNode()
 
+  var _birdAnimationNode = SKSpriteNode()
+  var _birdAnimationFrames : SKTexture[] = []
+
+  func loadBirdAnimation() {
+    for var i = 1; i < 60; i++ {
+      let textureName = "bird-\(i)"
+      let texture = _scene1Atlas.textureNamed(textureName)
+      _birdAnimationFrames.append(texture)
+    }
+    _birdAnimationNode = SKSpriteNode(texture: _birdAnimationFrames[0])
+    _birdAnimationNode.position = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+  }
+  
+  func runBirdAnimation() {
+    self.addChild(_birdAnimationNode)
+    _birdAnimationNode.runAction(
+      SKAction.repeatAction(
+        SKAction.animateWithTextures(_birdAnimationFrames, timePerFrame:0.1, resize:false, restore:false),
+        count:1
+      ),
+      withKey:"clickableAnimation"
+    )
+  }
+  
   override func didMoveToView(view: SKView) {
     let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
 
@@ -19,17 +45,16 @@ class Scene1 : SKScene {
     background.position = centerPos
 
     let letter = SKSpriteNode(imageNamed: "letter")
-    letter.position = centerPos
+    letter.position = CGPoint(x:545, y:123)
+    letter.name = "letter"
     
     self.addChild(background)
     self.addChild(letter)
     
-    let scene1Atlas = SKTextureAtlas(named: "Scene1")
-    
     var clickableFrames : SKTexture[] = []
     for var i = 1; i <= 36; i++ {
       let textureName = "clickable-\(i)"
-      let texture = scene1Atlas.textureNamed(textureName)
+      let texture = _scene1Atlas.textureNamed(textureName)
       clickableFrames.append(texture)
     }
     let firstClickableTexture = clickableFrames[0]
@@ -44,6 +69,8 @@ class Scene1 : SKScene {
       ),
       withKey:"clickableAnimation"
     )
+    
+    loadBirdAnimation()
   }
   
   func runClickableAnimation() {
@@ -53,8 +80,13 @@ class Scene1 : SKScene {
   override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
     let touch = touches.anyObject() as UITouch
     let position = touch.locationInNode(self)
-    let touchedNode = self.nodeAtPoint(position)
-    
-    NSLog("%s", touchedNode.name)
+    if let touchedNode = self.nodeAtPoint(position) {
+      if let name = touchedNode.name {
+        if name == "letter" {
+          touchedNode.removeFromParent()
+          runBirdAnimation()
+        }
+      }
+    }
   }
 }
