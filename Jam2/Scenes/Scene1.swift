@@ -12,29 +12,111 @@ import SpriteKit
 class Scene1 : SKScene {
   let _scene1Atlas = SKTextureAtlas(named: "Scene1")
 
-  var _clickableAnimationNode = SKSpriteNode()
-
   var _birdAnimationNode = SKSpriteNode()
-  var _birdAnimationFrames : SKTexture[] = []
+  var _birdAnimationAction = SKAction()
 
+  var _cartAnimationNode = SKSpriteNode()
+  var _cartAnimationAction = SKAction()
+
+  var _catAnimationNode = SKSpriteNode()
+  var _catAnimationAction = SKAction()
+
+  var _clickableAnimationNode = SKSpriteNode()
+  var _clickableAnimationAction = SKAction()
+
+  func loadClickableAnimation() {
+    var clickableAnimationFrames : SKTexture[] = []
+    for i in 1...36 {
+      let textureName = "clickable-\(i)"
+      let texture = _scene1Atlas.textureNamed(textureName)
+      clickableAnimationFrames.append(texture)
+    }
+    _clickableAnimationNode = SKSpriteNode(texture: clickableAnimationFrames[0])
+    _clickableAnimationAction = SKAction.animateWithTextures(clickableAnimationFrames, timePerFrame:0.08, resize:false, restore:true)
+  }
+  
+  func runClickableAnimation() {
+    let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+    _clickableAnimationNode.position = centerPos
+    self.addChild(_clickableAnimationNode)
+
+    _clickableAnimationNode.runAction(
+      _clickableAnimationAction,
+      withKey:"clickableAnimation"
+    )
+  }
+  
   func loadBirdAnimation() {
-    for var i = 1; i < 60; i++ {
+    var birdAnimationFrames : SKTexture[] = []
+    for i in 1...60 {
       let textureName = "bird-\(i)"
       let texture = _scene1Atlas.textureNamed(textureName)
-      _birdAnimationFrames.append(texture)
+      birdAnimationFrames.append(texture)
     }
-    _birdAnimationNode = SKSpriteNode(texture: _birdAnimationFrames[0])
-    _birdAnimationNode.position = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+    _birdAnimationNode = SKSpriteNode(texture: birdAnimationFrames[0])
+    _birdAnimationAction = SKAction.animateWithTextures(birdAnimationFrames, timePerFrame:0.08)
   }
   
   func runBirdAnimation() {
+    let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+    _birdAnimationNode.position = centerPos
     self.addChild(_birdAnimationNode)
+
     _birdAnimationNode.runAction(
-      SKAction.repeatAction(
-        SKAction.animateWithTextures(_birdAnimationFrames, timePerFrame:0.1, resize:false, restore:false),
-        count:1
-      ),
-      withKey:"clickableAnimation"
+      _birdAnimationAction, withKey:"birdAnimation"
+    )
+  }
+
+  func loadCartAnimation() {
+    var cartAnimationFrames : SKTexture[] = []
+    for i in 1...41 {
+      let textureName = "cart-\(i)"
+      let texture = _scene1Atlas.textureNamed(textureName)
+      cartAnimationFrames.append(texture)
+    }
+    _cartAnimationNode = SKSpriteNode(texture: cartAnimationFrames[0])
+    _cartAnimationAction = SKAction.animateWithTextures(cartAnimationFrames, timePerFrame:0.08)
+  }
+  
+  func runCartAnimation() {
+    let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+    _cartAnimationNode.position = centerPos
+    self.addChild(_cartAnimationNode)
+
+    _cartAnimationNode.runAction(
+      _cartAnimationAction, withKey:"cartAnimation"
+    )
+  }
+  
+  func loadCatAnimation() {
+    var catAnimationFrames : SKTexture[] = []
+    for i in 1...7 {
+      let textureName = "cat-\(i)"
+      let texture = _scene1Atlas.textureNamed(textureName)
+      catAnimationFrames.append(texture)
+    }
+    
+    var catTurnHeadFrames = [
+      _scene1Atlas.textureNamed("cat-turnhead")
+    ]
+    
+    _catAnimationNode = SKSpriteNode(texture: catAnimationFrames[0])
+    _catAnimationAction = SKAction.sequence([
+      SKAction.animateWithTextures(catAnimationFrames, timePerFrame:0.08),
+      SKAction.waitForDuration(4.5),
+      SKAction.animateWithTextures(catTurnHeadFrames, timePerFrame:0.08)
+      ])
+  }
+  
+  func runCatAnimation() {
+    let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+    _catAnimationNode.position = centerPos
+    self.addChild(_catAnimationNode)
+    
+    _cartAnimationNode.removeFromParent() // removes cart cz cat animation using same images.
+    
+    _catAnimationNode.runAction(
+      _catAnimationAction, withKey:"catAnimation"
     )
   }
   
@@ -51,30 +133,14 @@ class Scene1 : SKScene {
     self.addChild(background)
     self.addChild(letter)
     
-    var clickableFrames : SKTexture[] = []
-    for var i = 1; i <= 36; i++ {
-      let textureName = "clickable-\(i)"
-      let texture = _scene1Atlas.textureNamed(textureName)
-      clickableFrames.append(texture)
-    }
-    let firstClickableTexture = clickableFrames[0]
-    _clickableAnimationNode = SKSpriteNode(texture: firstClickableTexture)
-    _clickableAnimationNode.position = centerPos
-    self.addChild(_clickableAnimationNode)
-    
-    _clickableAnimationNode.runAction(
-      SKAction.repeatAction(
-        SKAction.animateWithTextures(clickableFrames, timePerFrame:0.1, resize:false, restore:true),
-        count:1
-      ),
-      withKey:"clickableAnimation"
-    )
+    loadClickableAnimation()
+    runClickableAnimation()
     
     loadBirdAnimation()
-  }
-  
-  func runClickableAnimation() {
-
+    loadCatAnimation()
+    
+    loadCartAnimation()
+    runCartAnimation()
   }
   
   override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -85,6 +151,7 @@ class Scene1 : SKScene {
         if name == "letter" {
           touchedNode.removeFromParent()
           runBirdAnimation()
+          runCatAnimation()
         }
       }
     }
