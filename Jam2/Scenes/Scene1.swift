@@ -10,6 +10,7 @@ import Foundation
 import SpriteKit
 
 class Scene1 : SKScene {
+  var _swipeGestureRecognizer = UISwipeGestureRecognizer()
   let _scene1Atlas = SKTextureAtlas(named: "Scene1")
 
   var _birdAnimationNode = SKSpriteNode()
@@ -32,7 +33,8 @@ class Scene1 : SKScene {
       clickableAnimationFrames.append(texture)
     }
     _clickableAnimationNode = SKSpriteNode(texture: clickableAnimationFrames[0])
-    _clickableAnimationAction = SKAction.animateWithTextures(clickableAnimationFrames, timePerFrame:0.08, resize:false, restore:true)
+    _clickableAnimationAction = SKAction.animateWithTextures(
+      clickableAnimationFrames, timePerFrame:0.08, resize:false, restore:true)
   }
   
   func runClickableAnimation() {
@@ -53,6 +55,8 @@ class Scene1 : SKScene {
       let texture = _scene1Atlas.textureNamed(textureName)
       birdAnimationFrames.append(texture)
     }
+    let curlTexture = _scene1Atlas.textureNamed("curl")
+    birdAnimationFrames.append(curlTexture)
     _birdAnimationNode = SKSpriteNode(texture: birdAnimationFrames[0])
     _birdAnimationAction = SKAction.animateWithTextures(birdAnimationFrames, timePerFrame:0.08)
   }
@@ -105,7 +109,7 @@ class Scene1 : SKScene {
       SKAction.animateWithTextures(catAnimationFrames, timePerFrame:0.08),
       SKAction.waitForDuration(4.5),
       SKAction.animateWithTextures(catTurnHeadFrames, timePerFrame:0.08)
-      ])
+    ])
   }
   
   func runCatAnimation() {
@@ -121,6 +125,9 @@ class Scene1 : SKScene {
   }
   
   override func didMoveToView(view: SKView) {
+    _swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipe:")
+    self.view.addGestureRecognizer(_swipeGestureRecognizer)
+
     let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
 
     let background = SKSpriteNode(imageNamed: "Scene1.bg")
@@ -155,5 +162,9 @@ class Scene1 : SKScene {
         }
       }
     }
+  }
+  
+  func handleSwipe(recognizer: UISwipeGestureRecognizer) {
+    println("handleSwipe")
   }
 }
