@@ -165,6 +165,8 @@ class Scene1 : SKScene {
   }
   
   func handleSwipe(recognizer: UISwipeGestureRecognizer) {
-    println("handleSwipe")
+    let s2 = Scene2.sceneWithSize(self.view.bounds.size)
+    self.scene.view.presentScene(s2, transition:
+      SKTransition.revealWithDirection(.Left, duration: 1.0))
   }
 }
