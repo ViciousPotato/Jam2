@@ -126,6 +126,7 @@ class Scene1 : SKScene {
   
   override func didMoveToView(view: SKView) {
     _swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipe:")
+    _swipeGestureRecognizer.direction = .Left
     self.view.addGestureRecognizer(_swipeGestureRecognizer)
 
     let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
