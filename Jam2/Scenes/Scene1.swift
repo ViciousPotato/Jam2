@@ -10,7 +10,6 @@ import Foundation
 import SpriteKit
 
 class Scene1 : SKScene {
-  var _swipeGestureRecognizer = UISwipeGestureRecognizer()
   let _scene1Atlas = SKTextureAtlas(named: "Scene1")
 
   var _birdAnimationNode = SKSpriteNode()
@@ -125,9 +124,13 @@ class Scene1 : SKScene {
   }
   
   override func didMoveToView(view: SKView) {
-    _swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipe:")
-    _swipeGestureRecognizer.direction = .Left
-    self.view.addGestureRecognizer(_swipeGestureRecognizer)
+    let swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleLeftSwipe:")
+    swipeLeftGestureRecognizer.direction = .Left
+    self.view.addGestureRecognizer(swipeLeftGestureRecognizer)
+    
+    let swipeRightGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleRightSwipe:")
+    swipeRightGestureRecognizer.direction = .Right
+    self.view.addGestureRecognizer(swipeRightGestureRecognizer)
 
     let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
 
@@ -165,9 +168,15 @@ class Scene1 : SKScene {
     }
   }
   
-  func handleSwipe(recognizer: UISwipeGestureRecognizer) {
+  func handleLeftSwipe(recognizer: UISwipeGestureRecognizer) {
     let s2 = Scene2.sceneWithSize(self.view.bounds.size)
     self.scene.view.presentScene(s2, transition:
       SKTransition.revealWithDirection(.Left, duration: 1.0))
+  }
+  
+  func handleRightSwipe(recognizer: UISwipeGestureRecognizer) {
+    let s2 = Scene2.sceneWithSize(self.view.bounds.size)
+    self.scene.view.presentScene(s2, transition:
+      SKTransition.revealWithDirection(.Right, duration: 1.0))
   }
 }
