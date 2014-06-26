@@ -10,6 +10,8 @@
 		CB0DEE1C1943042F00121FC3 /* Scene1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0DEE1B1943042F00121FC3 /* Scene1.swift */; };
 		CB1971C81949E1B800B15816 /* Scene1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CB1971C71949E1B800B15816 /* Scene1.atlas */; };
 		CB5AF88D19508EEB00D7CE7C /* Scene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AF88C19508EEB00D7CE7C /* Scene2.swift */; };
+		CB5AF8A2195C7D7700D7CE7C /* Scene3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AF8A1195C7D7700D7CE7C /* Scene3.swift */; };
+		CB5AF8A4195C7D8900D7CE7C /* BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AF8A3195C7D8900D7CE7C /* BaseScene.swift */; };
 		CBE79C0419409706007E2CF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE79C0319409706007E2CF5 /* AppDelegate.swift */; };
 		CBE79C0619409706007E2CF5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CBE79C0519409706007E2CF5 /* GameScene.sks */; };
 		CBE79C0819409706007E2CF5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE79C0719409706007E2CF5 /* GameScene.swift */; };
@@ -33,6 +35,8 @@
 		CB0DEE1B1943042F00121FC3 /* Scene1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene1.swift; path = Scenes/Scene1.swift; sourceTree = "<group>"; };
 		CB1971C71949E1B800B15816 /* Scene1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Scene1.atlas; sourceTree = "<group>"; };
 		CB5AF88C19508EEB00D7CE7C /* Scene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene2.swift; path = Scenes/Scene2.swift; sourceTree = "<group>"; };
+		CB5AF8A1195C7D7700D7CE7C /* Scene3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene3.swift; path = Scenes/Scene3.swift; sourceTree = "<group>"; };
+		CB5AF8A3195C7D8900D7CE7C /* BaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScene.swift; sourceTree = "<group>"; };
 		CBE79BFE19409706007E2CF5 /* Jam2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jam2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE79C0219409706007E2CF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBE79C0319409706007E2CF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 			children = (
 				CB0DEE1B1943042F00121FC3 /* Scene1.swift */,
 				CB5AF88C19508EEB00D7CE7C /* Scene2.swift */,
+				CB5AF8A1195C7D7700D7CE7C /* Scene3.swift */,
+				CB5AF8A3195C7D8900D7CE7C /* BaseScene.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -244,6 +250,8 @@
 			files = (
 				CBE79C0819409706007E2CF5 /* GameScene.swift in Sources */,
 				CBE79C0A19409706007E2CF5 /* GameViewController.swift in Sources */,
+				CB5AF8A4195C7D8900D7CE7C /* BaseScene.swift in Sources */,
+				CB5AF8A2195C7D7700D7CE7C /* Scene3.swift in Sources */,
 				CB5AF88D19508EEB00D7CE7C /* Scene2.swift in Sources */,
 				CB0DEE1C1943042F00121FC3 /* Scene1.swift in Sources */,
 				CBE79C0419409706007E2CF5 /* AppDelegate.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-class Scene1 : SKScene {
+class Scene1 : BaseScene {
   let _scene1Atlas = SKTextureAtlas(named: "Scene1")
 
   var _birdAnimationNode = SKSpriteNode()
@@ -23,7 +23,7 @@ class Scene1 : SKScene {
 
   var _clickableAnimationNode = SKSpriteNode()
   var _clickableAnimationAction = SKAction()
-
+  
   func loadClickableAnimation() {
     var clickableAnimationFrames : SKTexture[] = []
     for i in 1...36 {
@@ -124,13 +124,7 @@ class Scene1 : SKScene {
   }
   
   override func didMoveToView(view: SKView) {
-    let swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleLeftSwipe:")
-    swipeLeftGestureRecognizer.direction = .Left
-    self.view.addGestureRecognizer(swipeLeftGestureRecognizer)
-    
-    let swipeRightGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleRightSwipe:")
-    swipeRightGestureRecognizer.direction = .Right
-    self.view.addGestureRecognizer(swipeRightGestureRecognizer)
+    super.didMoveToView(view)
 
     let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
 

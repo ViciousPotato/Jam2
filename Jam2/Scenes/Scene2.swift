@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-class Scene2 : SKScene {
+class Scene2 : BaseScene {
     override func didMoveToView(view: SKView) {
         let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
 
