@@ -63,4 +63,19 @@ class BaseScene : SKScene {
     self.scene.view.presentScene(scene, transition:
       SKTransition.revealWithDirection(.Right, duration: 1.0))
   }
+  
+  func createAnimationFromAtlas(atlas: SKTextureAtlas, files: String[]) -> (SKSpriteNode, SKAction) {
+    var animationFrames : SKTexture[] = []
+
+    for textureName in files {
+      let texture = atlas.textureNamed(textureName)
+      animationFrames.append(texture)
+    }
+
+    let animationNode = SKSpriteNode(texture: animationFrames[0])
+    let animationAction = SKAction.animateWithTextures(
+      animationFrames, timePerFrame:0.08, resize:false, restore:true)
+
+    return (animationNode, animationAction)
+  }
 }
