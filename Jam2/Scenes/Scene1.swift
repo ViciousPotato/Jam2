@@ -126,16 +126,11 @@ class Scene1 : BaseScene {
   override func didMoveToView(view: SKView) {
     super.didMoveToView(view)
 
-    let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
-
-    let background = SKSpriteNode(imageNamed: "Scene1.bg")
-    background.position = centerPos
+    addBg("Scene1.bg")
 
     let letter = SKSpriteNode(imageNamed: "letter")
     letter.position = CGPoint(x:545, y:123)
     letter.name = "letter"
-    
-    self.addChild(background)
     self.addChild(letter)
     
     loadClickableAnimation()
