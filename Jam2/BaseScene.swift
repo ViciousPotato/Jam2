@@ -8,9 +8,12 @@
 
 import Foundation
 import SpriteKit
+import Swift
 
 class BaseScene : SKScene {
   var CENTERPOINT = CGPoint()
+  var Scenes : AnyClass[] = [Scene1.self, Scene2.self, Scene3.self]
+  var sceneIndex : Int = -1
 
   override func didMoveToView(view: SKView) {
     let swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleLeftSwipe:")
@@ -29,5 +32,35 @@ class BaseScene : SKScene {
     let background = SKSpriteNode(imageNamed: name)
     background.position = CENTERPOINT
     self.addChild(background)
+  }
+  
+  var currentSceneIndex : Int {
+    get {
+      return self.sceneIndex
+      // TODO: fix below code
+      /*
+      if let idx = find(Scenes, self) {
+        return idx
+      }
+      return -1;
+      */
+    }
+    set (val) {
+      self.sceneIndex = val;
+    }
+  }
+  
+  func handleLeftSwipe(recognizer: UISwipeGestureRecognizer) {
+    // next scene
+    let scene = (Scenes[sceneIndex] as BaseScene.Type).sceneWithSize(self.view.bounds.size)
+    self.scene.view.presentScene(scene, transition:
+      SKTransition.revealWithDirection(.Left, duration: 1.0))
+  }
+  
+  func handleRightSwipe(recognizer: UISwipeGestureRecognizer) {
+    // previous scene
+    let scene = (Scenes[sceneIndex-2] as BaseScene.Type).sceneWithSize(self.view.bounds.size)
+    self.scene.view.presentScene(scene, transition:
+      SKTransition.revealWithDirection(.Right, duration: 1.0))
   }
 }

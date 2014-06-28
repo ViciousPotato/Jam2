@@ -24,6 +24,11 @@ class Scene1 : BaseScene {
   var _clickableAnimationNode = SKSpriteNode()
   var _clickableAnimationAction = SKAction()
   
+  override var sceneIndex : Int {
+    get { return 1 }
+    set(val) {  }
+  }
+  
   func loadClickableAnimation() {
     var clickableAnimationFrames : SKTexture[] = []
     for i in 1...36 {
@@ -155,17 +160,5 @@ class Scene1 : BaseScene {
         }
       }
     }
-  }
-  
-  func handleLeftSwipe(recognizer: UISwipeGestureRecognizer) {
-    let s2 = Scene2.sceneWithSize(self.view.bounds.size)
-    self.scene.view.presentScene(s2, transition:
-      SKTransition.revealWithDirection(.Left, duration: 1.0))
-  }
-  
-  func handleRightSwipe(recognizer: UISwipeGestureRecognizer) {
-    let s2 = Scene2.sceneWithSize(self.view.bounds.size)
-    self.scene.view.presentScene(s2, transition:
-      SKTransition.revealWithDirection(.Right, duration: 1.0))
   }
 }

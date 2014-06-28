@@ -10,6 +10,11 @@ import Foundation
 import SpriteKit
 
 class Scene3 : BaseScene {
+  override var sceneIndex : Int {
+    get { return 3 }
+    set(val) {  }
+  }
+
   override func didMoveToView(view: SKView) {
     super.didMoveToView(view)
     
