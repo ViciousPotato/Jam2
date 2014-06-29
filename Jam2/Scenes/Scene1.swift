@@ -30,15 +30,8 @@ class Scene1 : BaseScene {
   }
   
   func loadClickableAnimation() {
-    var clickableAnimationFrames : SKTexture[] = []
-    for i in 1...36 {
-      let textureName = "clickable-\(i)"
-      let texture = _scene1Atlas.textureNamed(textureName)
-      clickableAnimationFrames.append(texture)
-    }
-    _clickableAnimationNode = SKSpriteNode(texture: clickableAnimationFrames[0])
-    _clickableAnimationAction = SKAction.animateWithTextures(
-      clickableAnimationFrames, timePerFrame:0.08, resize:false, restore:true)
+    let animationFiles = Array(map(1...36) { "clickable-\($0)" })
+    (_clickableAnimationNode, _clickableAnimationAction) = createAnimationFromAtlas(_scene1Atlas, files: animationFiles)
   }
   
   func runClickableAnimation() {
