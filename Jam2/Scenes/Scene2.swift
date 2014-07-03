@@ -10,6 +10,8 @@ import Foundation
 import SpriteKit
 
 class Scene2 : BaseScene {
+  let _sceneAtlas = SKTextureAtlas(named: "Scene2")
+
   override var sceneIndex : Int {
     get { return 2 }
     set(val) {}

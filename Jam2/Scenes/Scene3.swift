@@ -20,4 +20,8 @@ class Scene3 : BaseScene {
     
     addBg("Scene3.bg")
   }
+
+  func loadFlyAnimation() {
+    let animationFiles = Array(map(1...30) { "fly-\($0).png" })
+  }
 }
