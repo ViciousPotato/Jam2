@@ -20,6 +20,7 @@
 		CBE79C0F19409706007E2CF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE79C0E19409706007E2CF5 /* Images.xcassets */; };
 		CBE79C1B19409706007E2CF5 /* Jam2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE79C1A19409706007E2CF5 /* Jam2Tests.swift */; };
 		CBF158C51965BD900077E6BB /* Scene2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = CBF158C41965BD900077E6BB /* Scene2.atlas */; };
+		CBF158C7196861880077E6BB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF158C6196861880077E6BB /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		CBE79C1919409706007E2CF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBE79C1A19409706007E2CF5 /* Jam2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jam2Tests.swift; sourceTree = "<group>"; };
 		CBF158C41965BD900077E6BB /* Scene2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Scene2.atlas; sourceTree = "<group>"; };
+		CBF158C6196861880077E6BB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				CBE79C0B19409706007E2CF5 /* Main.storyboard */,
 				CBE79C0E19409706007E2CF5 /* Images.xcassets */,
 				CBE79C0119409706007E2CF5 /* Supporting Files */,
+				CBF158C6196861880077E6BB /* Extensions.swift */,
 			);
 			path = Jam2;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				CBE79C0819409706007E2CF5 /* GameScene.swift in Sources */,
 				CBE79C0A19409706007E2CF5 /* GameViewController.swift in Sources */,
 				CB5AF8A4195C7D8900D7CE7C /* BaseScene.swift in Sources */,
+				CBF158C7196861880077E6BB /* Extensions.swift in Sources */,
 				CB5AF8A2195C7D7700D7CE7C /* Scene3.swift in Sources */,
 				CB5AF88D19508EEB00D7CE7C /* Scene2.swift in Sources */,
 				CB0DEE1C1943042F00121FC3 /* Scene1.swift in Sources */,

@@ -35,8 +35,7 @@ class Scene1 : BaseScene {
   }
   
   func runClickableAnimation() {
-    let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
-    _clickableAnimationNode.position = centerPos
+    _clickableAnimationNode.position = CENTERPOS
     self.addChild(_clickableAnimationNode)
 
     _clickableAnimationNode.runAction(
@@ -59,8 +58,7 @@ class Scene1 : BaseScene {
   }
   
   func runBirdAnimation() {
-    let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
-    _birdAnimationNode.position = centerPos
+    _birdAnimationNode.position = CENTERPOS
     self.addChild(_birdAnimationNode)
 
     _birdAnimationNode.runAction(
@@ -80,8 +78,7 @@ class Scene1 : BaseScene {
   }
   
   func runCartAnimation() {
-    let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
-    _cartAnimationNode.position = centerPos
+    _cartAnimationNode.position = CENTERPOS
     self.addChild(_cartAnimationNode)
 
     _cartAnimationNode.runAction(
@@ -110,8 +107,7 @@ class Scene1 : BaseScene {
   }
   
   func runCatAnimation() {
-    let centerPos = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
-    _catAnimationNode.position = centerPos
+    _catAnimationNode.position = CENTERPOS
     self.addChild(_catAnimationNode)
     
     _cartAnimationNode.removeFromParent() // removes cart cz cat animation using same images.

@@ -11,7 +11,7 @@ import SpriteKit
 import Swift
 
 class BaseScene : SKScene {
-  var CENTERPOINT = CGPoint()
+  var CENTERPOS = CGPoint()
   var Scenes : AnyClass[] = [Scene1.self, Scene2.self, Scene3.self]
   var sceneIndex : Int = -1
 
@@ -24,13 +24,13 @@ class BaseScene : SKScene {
     swipeRightGestureRecognizer.direction = .Right
     self.view.addGestureRecognizer(swipeRightGestureRecognizer)
     
-    self.CENTERPOINT = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
-    // NSLog("BaseScene init Point: %f, %f", CENTERPOINT.x, CENTERPOINT.y)
+    self.CENTERPOS = CGPoint(x: CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+    // NSLog("BaseScene init Point: %f, %f", CENTERPOS.x, CENTERPOS.y)
   }
   
   func addBg(name: String) {
     let background = SKSpriteNode(imageNamed: name)
-    background.position = CENTERPOINT
+    background.position = CENTERPOS
     self.addChild(background)
   }
   
