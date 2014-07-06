@@ -15,3 +15,13 @@ extension String {
     })
   }
 }
+
+extension Range {
+  func map(f: T -> String) -> String[] {
+    var arr: String[] = []
+    for i in self {
+      arr.append(f(i))
+    }
+    return arr
+  }
+}

@@ -74,7 +74,7 @@ class BaseScene : SKScene {
 
     let animationNode = SKSpriteNode(texture: animationFrames[0])
     let animationAction = SKAction.animateWithTextures(
-      animationFrames, timePerFrame:0.08, resize:false, restore:true)
+      animationFrames, timePerFrame:0.08, resize:false, restore:false)
 
     return (animationNode, animationAction)
   }
