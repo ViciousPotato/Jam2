@@ -31,16 +31,16 @@ class Scene2 : BaseScene {
     addBg("Scene2.bg")
 
     loadBoyAnimation()
-    loadFlyAnimation()
     runBoyAnimation()
-    runFlyAnimation()
+    
+    let (flyNode, flyAction) = loadFlyAnimation()
+    flyNode.showAtCenter(self)
+    flyNode.runAction(flyAction, completion: { self.addCurl(self._sceneAtlas) })
   }
   
-  func loadFlyAnimation() {
-    let animationFiles = (1...30).map({ "fly-\($0)" }) + ["curl"]
-    println(animationFiles)
-    (_flyNode, _flyAction) =
-      createAnimationFromAtlas(_sceneAtlas, files: animationFiles)
+  func loadFlyAnimation() -> (SKSpriteNode, SKAction) {
+    let animationFiles = (1...30).map({ "fly-\($0)" })
+    return createAnimationFromAtlas(_sceneAtlas, files: animationFiles)
   }
   
   func runFlyAnimation() {

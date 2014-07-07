@@ -34,6 +34,11 @@ class BaseScene : SKScene {
     self.addChild(background)
   }
   
+  func addChildAtCenter(node: SKSpriteNode) {
+    node.position = CENTERPOS
+    addChild(node)
+  }
+  
   var currentSceneIndex : Int {
     get {
       return self.sceneIndex
@@ -77,5 +82,11 @@ class BaseScene : SKScene {
       animationFrames, timePerFrame:0.08, resize:false, restore:false)
 
     return (animationNode, animationAction)
+  }
+  
+  func addCurl(atlas: SKTextureAtlas, filename: String = "curl") {
+    let curlTexture = atlas.textureNamed(filename)
+    let curlNode = SKSpriteNode(texture: curlTexture)
+    curlNode.showAtCenter(self)
   }
 }

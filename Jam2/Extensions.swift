@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SpriteKit
 
 extension String {
   func repeat(i: Int) -> String[] {
@@ -23,5 +24,13 @@ extension Range {
       arr.append(f(i))
     }
     return arr
+  }
+}
+
+extension SKSpriteNode {
+  func showAtCenter(s: SKScene) {
+    let center = CGPoint(x: CGRectGetMidX(s.frame), y:CGRectGetMidY(s.frame))
+    self.position = center
+    s.addChild(self)
   }
 }
