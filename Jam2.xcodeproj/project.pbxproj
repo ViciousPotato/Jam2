@@ -25,6 +25,13 @@
 		CB19C2821972636F00D76EA3 /* Scene17.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C2731972636F00D76EA3 /* Scene17.swift */; };
 		CB19C2831972636F00D76EA3 /* Scene18.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C2741972636F00D76EA3 /* Scene18.swift */; };
 		CB19C2841972636F00D76EA3 /* Scene19.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C2751972636F00D76EA3 /* Scene19.swift */; };
+		CB19C28C1972802C00D76EA3 /* Scene20.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C2851972802C00D76EA3 /* Scene20.swift */; };
+		CB19C28D1972802C00D76EA3 /* Scene21.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C2861972802C00D76EA3 /* Scene21.swift */; };
+		CB19C28E1972802C00D76EA3 /* Scene22.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C2871972802C00D76EA3 /* Scene22.swift */; };
+		CB19C28F1972802C00D76EA3 /* Scene23.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C2881972802C00D76EA3 /* Scene23.swift */; };
+		CB19C2901972802C00D76EA3 /* Scene24.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C2891972802C00D76EA3 /* Scene24.swift */; };
+		CB19C2911972802C00D76EA3 /* Scene25.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C28A1972802C00D76EA3 /* Scene25.swift */; };
+		CB19C2921972802C00D76EA3 /* Scene26.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19C28B1972802C00D76EA3 /* Scene26.swift */; };
 		CB5AF88D19508EEB00D7CE7C /* Scene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AF88C19508EEB00D7CE7C /* Scene2.swift */; };
 		CB5AF8A2195C7D7700D7CE7C /* Scene3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AF8A1195C7D7700D7CE7C /* Scene3.swift */; };
 		CB5AF8A4195C7D8900D7CE7C /* BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AF8A3195C7D8900D7CE7C /* BaseScene.swift */; };
@@ -68,6 +75,13 @@
 		CB19C2731972636F00D76EA3 /* Scene17.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene17.swift; path = Scenes/Scene17.swift; sourceTree = "<group>"; };
 		CB19C2741972636F00D76EA3 /* Scene18.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene18.swift; path = Scenes/Scene18.swift; sourceTree = "<group>"; };
 		CB19C2751972636F00D76EA3 /* Scene19.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene19.swift; path = Scenes/Scene19.swift; sourceTree = "<group>"; };
+		CB19C2851972802C00D76EA3 /* Scene20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene20.swift; path = Scenes/Scene20.swift; sourceTree = "<group>"; };
+		CB19C2861972802C00D76EA3 /* Scene21.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene21.swift; path = Scenes/Scene21.swift; sourceTree = "<group>"; };
+		CB19C2871972802C00D76EA3 /* Scene22.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene22.swift; path = Scenes/Scene22.swift; sourceTree = "<group>"; };
+		CB19C2881972802C00D76EA3 /* Scene23.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene23.swift; path = Scenes/Scene23.swift; sourceTree = "<group>"; };
+		CB19C2891972802C00D76EA3 /* Scene24.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene24.swift; path = Scenes/Scene24.swift; sourceTree = "<group>"; };
+		CB19C28A1972802C00D76EA3 /* Scene25.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene25.swift; path = Scenes/Scene25.swift; sourceTree = "<group>"; };
+		CB19C28B1972802C00D76EA3 /* Scene26.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene26.swift; path = Scenes/Scene26.swift; sourceTree = "<group>"; };
 		CB5AF88C19508EEB00D7CE7C /* Scene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene2.swift; path = Scenes/Scene2.swift; sourceTree = "<group>"; };
 		CB5AF8A1195C7D7700D7CE7C /* Scene3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scene3.swift; path = Scenes/Scene3.swift; sourceTree = "<group>"; };
 		CB5AF8A3195C7D8900D7CE7C /* BaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScene.swift; sourceTree = "<group>"; };
@@ -127,6 +141,13 @@
 				CB19C2731972636F00D76EA3 /* Scene17.swift */,
 				CB19C2741972636F00D76EA3 /* Scene18.swift */,
 				CB19C2751972636F00D76EA3 /* Scene19.swift */,
+				CB19C2851972802C00D76EA3 /* Scene20.swift */,
+				CB19C2861972802C00D76EA3 /* Scene21.swift */,
+				CB19C2871972802C00D76EA3 /* Scene22.swift */,
+				CB19C2881972802C00D76EA3 /* Scene23.swift */,
+				CB19C2891972802C00D76EA3 /* Scene24.swift */,
+				CB19C28A1972802C00D76EA3 /* Scene25.swift */,
+				CB19C28B1972802C00D76EA3 /* Scene26.swift */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -304,23 +325,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB19C2831972636F00D76EA3 /* Scene18.swift in Sources */,
+				CB19C2921972802C00D76EA3 /* Scene26.swift in Sources */,
 				CBE79C0819409706007E2CF5 /* GameScene.swift in Sources */,
 				CBE79C0A19409706007E2CF5 /* GameViewController.swift in Sources */,
 				CB19C2761972636F00D76EA3 /* Scene5.swift in Sources */,
+				CB19C2901972802C00D76EA3 /* Scene24.swift in Sources */,
 				CB19C266197262CF00D76EA3 /* Scene4.swift in Sources */,
+				CB19C28E1972802C00D76EA3 /* Scene22.swift in Sources */,
 				CB19C27A1972636F00D76EA3 /* Scene9.swift in Sources */,
+				CB19C28F1972802C00D76EA3 /* Scene23.swift in Sources */,
 				CB5AF8A4195C7D8900D7CE7C /* BaseScene.swift in Sources */,
+				CB19C28D1972802C00D76EA3 /* Scene21.swift in Sources */,
 				CBF158C7196861880077E6BB /* Extensions.swift in Sources */,
 				CB19C2841972636F00D76EA3 /* Scene19.swift in Sources */,
 				CB5AF8A2195C7D7700D7CE7C /* Scene3.swift in Sources */,
 				CB19C2801972636F00D76EA3 /* Scene15.swift in Sources */,
 				CB19C27C1972636F00D76EA3 /* Scene11.swift in Sources */,
 				CB19C27B1972636F00D76EA3 /* Scene10.swift in Sources */,
+				CB19C28C1972802C00D76EA3 /* Scene20.swift in Sources */,
 				CB5AF88D19508EEB00D7CE7C /* Scene2.swift in Sources */,
 				CB19C2781972636F00D76EA3 /* Scene7.swift in Sources */,
 				CB0DEE1C1943042F00121FC3 /* Scene1.swift in Sources */,
 				CB19C27F1972636F00D76EA3 /* Scene14.swift in Sources */,
 				CB19C27D1972636F00D76EA3 /* Scene12.swift in Sources */,
+				CB19C2911972802C00D76EA3 /* Scene25.swift in Sources */,
 				CB19C27E1972636F00D76EA3 /* Scene13.swift in Sources */,
 				CB19C2771972636F00D76EA3 /* Scene6.swift in Sources */,
 				CB19C2791972636F00D76EA3 /* Scene8.swift in Sources */,

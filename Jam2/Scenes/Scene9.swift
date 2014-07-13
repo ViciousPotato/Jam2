@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import SpriteKit
+
+class Scene9 : BaseScene {
+  override func didMoveToView(view: SKView) {
+    addBg("Scene9.bg")
+  }
+}

@@ -12,7 +12,14 @@ import Swift
 
 class BaseScene : SKScene {
   var CENTERPOS = CGPoint()
-  var Scenes : AnyClass[] = [Scene1.self, Scene2.self, Scene3.self]
+  var Scenes : AnyClass[] = [
+    Scene1.self,  Scene2.self,  Scene3.self,  Scene4.self,  Scene5.self,
+    Scene6.self,  Scene7.self,  Scene8.self,  Scene9.self,  Scene10.self,
+    Scene11.self, Scene12.self, Scene13.self, Scene14.self, Scene15.self,
+    Scene16.self, Scene17.self, Scene18.self, Scene19.self, Scene20.self,
+    Scene21.self, Scene22.self, Scene23.self, Scene24.self, Scene25.self,
+    Scene26.self
+  ]
 
   var sceneIndex : Int {
     get {

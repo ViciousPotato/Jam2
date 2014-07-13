@@ -11,6 +11,6 @@ import SpriteKit
 
 class Scene4 : BaseScene {
   override func didMoveToView(view: SKView) {
-    
+    addBg("Scene4.bg")
   }
 }

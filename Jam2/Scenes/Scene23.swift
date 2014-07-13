@@ -9,8 +9,8 @@
 import Foundation
 import SpriteKit
 
-class Scene11 : BaseScene {
+class Scene23 : BaseScene {
   override func didMoveToView(view: SKView) {
-    addBg("Scene11.bg")
+    addBg("Scene19.bg")
   }
 }
