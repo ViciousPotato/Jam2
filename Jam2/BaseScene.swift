@@ -13,9 +13,24 @@ import Swift
 class BaseScene : SKScene {
   var CENTERPOS = CGPoint()
   var Scenes : AnyClass[] = [Scene1.self, Scene2.self, Scene3.self]
-  var sceneIndex : Int = -1
 
+  var sceneIndex : Int {
+    get {
+      let clsName = nameOfClass(self.dynamicType)
+      let range = clsName.rangeOfString("\\d+", options: .RegularExpressionSearch)
+      let idxString = clsName.substringWithRange(range)
+      if let index = idxString.toInt() {
+        return index
+      } else {
+        NSLog("Convert class name failed: \(clsName), default to 0")
+        return 0
+      }
+    }
+    set(val) {  }
+  }
+  
   override func didMoveToView(view: SKView) {
+    println(nameOfClass(self.dynamicType))
     let swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "handleLeftSwipe:")
     swipeLeftGestureRecognizer.direction = .Left
     self.view.addGestureRecognizer(swipeLeftGestureRecognizer)
@@ -57,6 +72,10 @@ class BaseScene : SKScene {
   
   func handleLeftSwipe(recognizer: UISwipeGestureRecognizer) {
     // next scene
+    if (sceneIndex >= Scenes.count) {
+      NSLog("sceneIndex too large: \(sceneIndex) ignore.")
+      return
+    }
     let scene = (Scenes[sceneIndex] as BaseScene.Type).sceneWithSize(self.view.bounds.size)
     self.scene.view.presentScene(scene, transition:
       SKTransition.revealWithDirection(.Left, duration: 1.0))
@@ -64,6 +83,10 @@ class BaseScene : SKScene {
   
   func handleRightSwipe(recognizer: UISwipeGestureRecognizer) {
     // previous scene
+    if (sceneIndex < 2) {
+      NSLog("Scene index \(sceneIndex) too small, ignore swipe.")
+      return
+    }
     let scene = (Scenes[sceneIndex-2] as BaseScene.Type).sceneWithSize(self.view.bounds.size)
     self.scene.view.presentScene(scene, transition:
       SKTransition.revealWithDirection(.Right, duration: 1.0))

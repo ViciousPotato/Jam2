@@ -24,11 +24,6 @@ class Scene1 : BaseScene {
   var _clickableAnimationNode = SKSpriteNode()
   var _clickableAnimationAction = SKAction()
   
-  override var sceneIndex : Int {
-    get { return 1 }
-    set(val) {  }
-  }
-  
   func loadClickableAnimation() {
     let animationFiles = Array(map(1...36) { "clickable-\($0)" })
     (_clickableAnimationNode, _clickableAnimationAction) = createAnimationFromAtlas(_scene1Atlas, files: animationFiles)

@@ -20,11 +20,6 @@ class Scene2 : BaseScene {
   var _boyNode = SKSpriteNode()
   var _boyAction = SKAction()
 
-  override var sceneIndex : Int {
-    get { return 2 }
-    set(val) {}
-  }
-
   override func didMoveToView(view: SKView) {
     super.didMoveToView(view)
 
